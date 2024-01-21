@@ -87,10 +87,10 @@ namespace Sample1
             // {
             //     spawnTimeData.ValueRW.CurrentTime += deltaTime;
             //     if(spawnTimeData.ValueRO.CurrentTime < spawnTimeData.ValueRO.MaxTime) continue;
-            //     spawnTimeData.ValueRW.CurrentTime += 0f;
+            //     spawnTimeData.ValueRW.CurrentTime = 0f;
             //
-            //     var entity = state.EntityManager.Instantiate(spawnEntityData.ValueRO.Entity);
-            //     state.EntityManager.SetComponentData(entity, new LocalTransform()
+            //     var entity = entityCommandBuffer.Instantiate(spawnEntityData.ValueRO.Entity);
+            //     entityCommandBuffer.SetComponent(entity, new LocalTransform()
             //     {
             //         Position = spawnEntityData.ValueRO.Position,
             //         Rotation = quaternion.identity,
